@@ -25,7 +25,7 @@ export default {
             try{
                 // await the data to return from the API
                 const res = await fetch(
-                    '
+                    'put api here!'
                     );
                 const movie = await res.json();
                 this.movie = movie;

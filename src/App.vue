@@ -1,36 +1,37 @@
 <template>
-  <div id="app" v-if="status === 'ready'">
+  <div id="app">
     <!-- the shorthand for "v-bind" is just ":" -->
-    <Header :title="title" v-if="status === 'ready'"/>
-    <MoviesList />
+    <Header :title="title"/>
+    <router-view />
+    <!-- <MoviesList />
   </div>
   <div v-else-if="status === 'not ready'">
     Loading
   </div>
   <div v-else>
-    Error
+    Error -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
-import MoviesList from './components/MoviesList.vue'
+// import MoviesList from './components/MoviesList.vue'
 
 export default {
   name: 'app',
   data(){
     return {
-      hello: "Hello World",
+      // hello: "Hello World",
       title: "Vue Movie DB",
-      isTrue: true,
-      status: 'ready'
+      // isTrue: true,
+      // status: 'ready'
     }
   },
   components: {
-    HelloWorld,
-    Header,
-    MoviesList
+    // HelloWorld,
+    Header
+    // MoviesList
   }
 }
 </script>
@@ -41,8 +42,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
 }
 ul{
   list-style: none;

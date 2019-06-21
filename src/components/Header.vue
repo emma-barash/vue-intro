@@ -12,7 +12,7 @@ export default {
     },
     data() {
         return {
-            name: 'Scott'
+            name: 'Movie DB - First Vue App'
         }
     },
     computed:{

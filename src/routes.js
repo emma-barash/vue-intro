@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import MoviesList from './components/MoviesList.vue';
 import Router from 'vue-router';
+import MovieDetail from '@/components/MovieDetail';
 
 Vue.use(Router);
 
@@ -12,6 +13,10 @@ routes: [
         path: '/',
         name: 'Movies List',
         component: MoviesList
+    }, {
+        path: '/movie/:id',
+        name: 'Movies Detail',
+        component: MovieDetail
     }
 ]
 })
